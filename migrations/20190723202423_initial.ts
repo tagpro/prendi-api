@@ -3,10 +3,10 @@ import { TableBuilder } from 'knex';
 
 exports.up = async (knex: Knex): Promise<any> => {
     // Run this in postgres directly it plays up on its own
-    await knex.raw(' create extension if not exists "uuid-ossp";');
+    // await knex.raw(' create extension if not exists "uuid-ossp";');
     await knex.schema
         .createTable('entity', (table: TableBuilder) => {
-            table.uuid('id').primary().defaultTo(knex.raw('uuid_generate_v4()'));
+            table.increments('id').primary();
         });
 };
 

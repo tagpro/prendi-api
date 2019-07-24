@@ -2,6 +2,7 @@ const express = require('express');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 import * as path from 'path';
+import entity from './routes/entity';
 
 // Initialize knex and Objection
 const knex = require('./models/db');
@@ -31,6 +32,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', (req, res) => {
     res.render('index', { title: 'Hey', message: 'Hello there!' });
 });
+
+app.use('/api/v1/', entity);
 
 // Swagger config
 const options = {
