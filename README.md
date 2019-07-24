@@ -1,7 +1,7 @@
 # Running on Docker
 
 ## Pre install
-Make sure you check up on docker-compose settings before setting it up. Also install docker and docker-compose. Follow docker's official website and not some 3rd party site. They are all crazy.
+Make sure you have installed docker and docker-compose. Follow docker's official website - https://docs.docker.com/ .
 
 1. `npm install`
 2. `npm run docker`
