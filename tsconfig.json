@@ -9,7 +9,7 @@
     },
     "indent": [true, "spaces", 4],
     "include": [
-        "src/*",
+        "src",
         "migrations/*",
         "knexfile.js"
     ]

@@ -1,6 +1,6 @@
 # Running on Docker
 
-## Pre install 
+## Pre install
 Make sure you check up on docker-compose settings before setting it up. Also install docker and docker-compose. Follow docker's official website and not some 3rd party site. They are all crazy.
 
 1. `npm install`
@@ -9,3 +9,6 @@ Make sure you check up on docker-compose settings before setting it up. Also ins
 
 ## Debugging
 Open VS code and connect to the docker's env to debug directly via VS Code. Attach to Docker via the debug view in VS Code.
+
+## Contact info
+If you need any info, please contact me on 0450 327 168 or jaspreet.singh.kler at gmail.com
