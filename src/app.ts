@@ -9,18 +9,18 @@ const knex = require('./models/db');
 
 // Initialize express app
 const app = express()
-    .use(bodyParser.json())
     .set('json spaces', 2);
 
 const expressSwagger = require('express-swagger-generator')(app);
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.raw({ limit: '10mb' }));
+app.use(bodyParser.json({ limit: '10mb' }));
+app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }))
 app.use(cookieParser());
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
-    res.header('Access-Control-Allow-Methods', 'PATCH, POST, GET, DELETE, OPTIONS')
+    res.header('Access-Control-Allow-Methods', 'PATCH, POST, GET, DELETE, OPTIONS');
     next();
 });
 

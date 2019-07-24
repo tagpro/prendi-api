@@ -1,5 +1,5 @@
 {
-  "name": "galene-be",
+  "name": "prendy-api",
   "version": "0.1.0",
   "private": true,
   "main": "./dist/index.js",
@@ -17,7 +17,9 @@
     "serve-debug": "tsc -w && nodemon --inspect dist/src/index.js",
     "watch": "tsc -w"
   },
+  "type": "module",
   "dependencies": {
+    "@types/jest": "^24.0.15",
     "body-parser": "^1.18.3",
     "cookie-parser": "~1.3.5",
     "express": "^4.16.4",
@@ -32,15 +34,26 @@
     "@types/knex": "^0.15.1",
     "@types/node": "^10.12.21",
     "@types/shelljs": "^0.8.3",
+    "babel-cli": "^6.26.0",
+    "babel-jest": "^24.8.0",
+    "babel-preset-env": "^1.7.0",
     "chai": "^4.2.0",
     "express-swagger-generator": "^1.1.11",
-    "jest": "^24.0.0",
+    "jest": "^24.8.0",
     "nodemon": "^1.18.9",
     "rimraf": "^2.6.3",
     "shelljs": "^0.8.3",
+    "superagent": "^5.1.0",
+    "supertest": "^4.0.2",
     "ts-jest": "^23.10.5",
     "ts-node": "^8.0.2",
     "tslint": "^5.12.1",
     "typescript": "^3.3.1"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "automock": true,
+    "unmockedModulePathPatterns": []
   }
 }

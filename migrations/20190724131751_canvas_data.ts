@@ -2,8 +2,6 @@ import * as Knex from 'knex';
 import { TableBuilder } from 'knex';
 
 exports.up = async (knex: Knex): Promise<any> => {
-    // Run this in postgres directly it plays up on its own
-    await knex.raw(' create extension if not exists "uuid-ossp";');
     await knex.schema
         .table('entity', (table: TableBuilder) => {
             table.text('canvas').defaultTo('');

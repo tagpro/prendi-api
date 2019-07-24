@@ -15,9 +15,7 @@ import Entity from '../models/Entity';
 router.get('/entity', async (req, res, next) => {
   try {
     const entities = await Entity
-      .query()
-      .skipUndefined()
-      .where('id', '=', 1);
+      .query().orderBy('id');
     if (entities.length) {
       res.json(entities[0]);
     } else {
@@ -46,11 +44,11 @@ router.post('/entity', async (req: express.Request, res: express.Response, next)
   };
 
   try {
-    const entity = await Entity.query()
-      .findById(1);
-    if (entity) {
-      await Entity.query()
-        .findById(1)
+    // I have the liberty to make multiple database calls because this appliation only allows one canvas.
+    // This can be optimized if we have multiple users.
+    const entity = await Entity.query().orderBy('id');
+    if (entity.length > 0) {
+      await Entity.query().findById(entity[0].id)
         .patch(req.body)
         ;
 
