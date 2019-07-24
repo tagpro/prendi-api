@@ -12,3 +12,6 @@ Open VS code and connect to the docker's env to debug directly via VS Code. Atta
 
 ## Contact info
 If you need any info, please contact me on 0450 327 168 or jaspreet.singh.kler at gmail.com
+
+### Previous work used
+1. Used the docker bootstraped express repo I built some time ago - https://github.com/tagpro/express-postgres 
