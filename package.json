@@ -42,7 +42,7 @@
     "jest": "^24.8.0",
     "nodemon": "^1.18.9",
     "rimraf": "^2.6.3",
-    "shelljs": "^0.8.3",
+    "shelljs": "^0.8.5",
     "superagent": "^5.1.0",
     "supertest": "^4.0.2",
     "ts-jest": "^23.10.5",
